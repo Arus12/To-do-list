@@ -25,29 +25,31 @@ $isLogged = new IsLogged($session, "");
 <body>
     <header>
         <img src="../img/logo/logo.png" alt="Logo"></img>
+        <a class="back" href="../index.php"><i class="fa-duotone fa-solid fa-circle-arrow-left"></i></a>
         <h1>To-Do list</h1>
         <span id="date"></span>
         <?php
         print($isLogged->printName($session));
         ?>
-        <a href="../php/singOut.php">Odhlásit se</a>
+        <a class="logOut" href="../php/singOut.php">Odhlásit se</a>
         <script>
             clockTime();
         </script>
     </header>
     <main style="justify-content: center;height:100%;padding:7%;">
-        <form>
+        <form action="../php/addList.php" method="post">
             <div class="container-addList" style="height: 55vh ;width: 35vw; border: solid;">
                 <div class="container-header" style="height: 10% ;width: 100%; border-bottom: solid;">
-                    <input type="text" name="title" placeholder="Nadpis" style="all: unset; height:100%;width:100%; text-align: center; font-weight:bold;">
+                    <textarea name="title" placeholder="Nadpis" style="height:100%;width:100%; text-align: center; resize:none; word-break:break-word;overflow:auto; font-weight:bold;align-content: center"></textarea>
                 </div>
                 <div class="container-body" style="height: 80% ;width: 100%;">
-                    <input type="text" name="contents" placeholder="Obsah" style="all: unset; height:100%;width:100%; text-align: center;word-wrap: break-word">
+                    <textarea name="contents" placeholder="Obsah" style="height:100%;width:100%;resize:none;text-align:center;word-break:break-word;overflow:auto;padding:4% 4% 4% 4%; align-content: center"></textarea>
                 </div>
                 <div class="container-footer" style="display:flex; height: 10% ;width: 100%; border-top: solid; font-weight:bold;">
                     <p style="padding-left:5px;">Deadline:</p>
-                    <input type="date" id="formDate" name="formDate" placeholder="dd-mm-yyyy" style="all: unset; height:100%;width:100%;padding-left:15px;">
+                    <input type="date" id="formDate" name="formDate" placeholder="dd-mm-yyyy" style="all: unset; height:100%;width:100%;padding: 0 40% 0 30%;">
                 </div>
+                <button type="submit">Přidat úkol</button>
             </div>
         </form>
         <script>

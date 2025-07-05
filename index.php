@@ -29,7 +29,7 @@ $isLogged = new IsLogged($session, "pages/");
         <?php
         print($isLogged->printName($session));
         ?>
-        <a href="php/singOut.php">Odhlásit se</a>
+        <a class="logOut" href="php/singOut.php">Odhlásit se</a>
         <script>
             clockTime();
         </script>

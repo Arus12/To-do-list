@@ -12,6 +12,7 @@ function rotate() {
         formContainer.style.transform = 'rotateY(0deg)';
     });
 }
+
 function showError(message) {
     const errorMessage = document.createElement('div');
     if (message == "Registrace úspěšná! Můžete se přihlásit") {
@@ -85,8 +86,8 @@ function printTodayDate() {
     if (day < 10) {
         day = "0" + day;
     }
-    document.getElementById("formDate").value = + year + "-" + month + "-" + day;
-    document.getElementById("formDate").min = + year + "-" + month + "-" + day;
+    document.getElementById("formDate").value = +year + "-" + month + "-" + day;
+    document.getElementById("formDate").min = +year + "-" + month + "-" + day;
     document.getElementById("formDate").max = (year + 30) + "-12-31";
 }
 
@@ -95,6 +96,7 @@ function onlyOneCheck() {
     let boxes = document.querySelectorAll("input[type=checkbox]");
     boxes.forEach(b => b.addEventListener("change", tick));
     tick();
+
     function tick(e) {
         let state = e.target.checked; // save state of changed checkbox
         boxes.forEach(b => b.checked = false); // clear all checkboxes
@@ -103,15 +105,16 @@ function onlyOneCheck() {
 }
 
 var lastTop = 0;
+
 function scrollFunction() {
     console.log(lastTop);
     if (document.documentElement.scrollTop > lastTop) {
-        document.getElementById("filter-container").style.marginTop = (document.documentElement.scrollTop + 100) + "px";
+        document.getElementById("filter-container").style.marginTop = (Number(document.documentElement.scrollTop) + 10) + "px";
     } else if (document.documentElement.scrollTop < lastTop) {
         if (document.documentElement.scrollTop == 0) {
             document.getElementById("filter-container").style.marginTop = (45) + "px";
         } else {
-            document.getElementById("filter-container").style.marginTop = (document.documentElement.scrollTop - 100) + "px";
+            document.getElementById("filter-container").style.marginTop = (Number(document.documentElement.scrollTop) - 10) + "px";
         }
     }
     lastTop = document.documentElement.scrollTop;

@@ -1,4 +1,5 @@
 /* ---------------------------LOGIN PAGE--------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -74,7 +75,8 @@ button:hover {
 }
 
 p {
-    margin-top: 10px;
+    font-size: large;
+    align-content: center;
 }
 
 a {
@@ -85,6 +87,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 
 /* ---------------------------ERROR MESSAGE--------------------------------- */
 
@@ -133,15 +136,17 @@ a:hover {
 
 
 /* ---------------------------INDEX PAGE--------------------------------- */
+
+
 /* -------------------HEADER------------------- */
+
 header {
     height: 15vh;
     width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "logo h1 name"
-        "logo date logOut";
+    grid-template-areas: "logo h1 name" "logo date logOut";
     justify-items: center;
     align-items: center;
     border-style: none none solid;
@@ -164,7 +169,7 @@ header>span {
     grid-area: date;
 }
 
-header>a {
+header>a.logOut {
     color: black;
     border: black solid;
     border-radius: 25px;
@@ -175,12 +180,26 @@ header>a {
     background-color: #b4666638;
 }
 
+header>a.back {
+    grid-area: logo;
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+    justify-self: start;
+    /* Přidáno pro zarovnání doleva */
+    margin-left: 60px;
+    /* Volitelné, pro větší odsazení od okraje */
+}
+
+
 /* -------------------MAIN------------------- */
+
 main {
     display: flex;
     width: 100%;
     height: 100%;
 }
+
 
 /* ------------FILTER------------- */
 
@@ -193,22 +212,24 @@ main .filter-container {
     max-width: 186px;
     transition: all .5s ease-in-out;
 }
-main .filter-container p{
+
+main .filter-container p {
     width: 100%;
     margin: 0 0 50px 0;
     text-align: center;
     font-size: 25px;
 }
-main .filter-container form{
-    display:flex;
+
+main .filter-container form {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 75%;
 }
 
 
-
 /* ------------LIST------------- */
+
 main .list-container {
     display: flex;
     flex-wrap: wrap;
