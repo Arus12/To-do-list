@@ -7,4 +7,5 @@ In this project the main goal do a page, where users can organize their duties u
 - main page with duties
 - main page with filter duties
 - add duty
-- remove duty 
+- remove duty
+- test
