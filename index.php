@@ -36,7 +36,7 @@ $isLogged = new IsLogged($session, "pages/");
     </header>
     <main>
         <div class="filter-container" id="filter-container" style="margin-top:45px">
-            <p><b>Filtr</b></p>
+            <p><b>Filter</b></p>
             <form action="/php/filterList.php" method="POST">
                 <label style="width:100%;text-align:center; margin:0 0 10px 0;">Průběh:</label>
                 <label for="progress1" style="font-size:15px">Hotovo</label>
