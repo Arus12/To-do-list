@@ -8,6 +8,7 @@ $isLogged = new IsLogged($session, "pages/");
 ?>
 <!DOCTYPE html>
 <html lang="cs">
+    
 
 <head>
     <title>To-Do List</title>
