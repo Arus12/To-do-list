@@ -89,7 +89,10 @@ class LoginRegister
                     return false;
                 }
             } else {
+                return false;
             }
+        } else {
+            return false;
         }
     }
 
