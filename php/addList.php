@@ -6,7 +6,7 @@ class AddList
         require_once("autoloader.php");
         $loader = new Loader;
         $loader->load("sqlLogin", "./");
-        var_dump($sqlLogin = new SqlLogin());
+        $sqlLogin = new SqlLogin();
         if ($this->checkdata()) {
             $data["title"] = $_POST["title"];
             $data["contents"] = $_POST["contents"];

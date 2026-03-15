@@ -250,12 +250,13 @@ main .add {
     background-color: #0056b3;
 }
 
-main .list-container p {
-    background-color: #61f014;
-    text-align: center;
-    margin: 0;
-    width: 65px;
+main .list-container .addTask p {
     font-size: 50px;
-    border: solid;
-    border-radius: 100%;
+    background-color:#61f014;
+    text-align:center;
+    margin:0;
+    width:65px;
+    font-size:50px;
+    border:solid;
+    border-radius:100%;
 }

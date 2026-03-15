@@ -3,7 +3,7 @@ require_once("php/autoloader.php");
 $loader = new Loader();
 $loader->load("WorkSession");
 $loader->load("isLogged");
-$session = new WorkSession($loader);
+$session = new WorkSession();
 $isLogged = new IsLogged($session, "pages/");
 ?>
 <!DOCTYPE html>
@@ -58,19 +58,12 @@ $isLogged = new IsLogged($session, "pages/");
         </div>
         <div class="list-container">
             <a href="pages/addListPage.php" div class="add">
-                <p>+</p>
+                <div class="addTask" style=""><p>+</p></div>
             </a>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
-            <div class="test" style="height:225px;width:225px;border:solid;margin:70px;"></div>
+            <?php
+            $loader->load("loadTasks");
+            $loadTasks = new LoadTasks($session);
+            ?>
         </div>
         <?php
         ?>
